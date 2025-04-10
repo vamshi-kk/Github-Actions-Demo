@@ -1,0 +1,19 @@
+name: demo-job
+
+on:
+  push
+
+jobs:
+  job_1:
+    runs-on: ubuntu-latest
+    steps:
+     - name: step_1
+       run: echo "job_1"
+
+  job_2:
+    runs-on: ubuntu-latest
+    needs: job_1
+    steps:
+      - name: step_1
+        run: echo "job_2"
+    
