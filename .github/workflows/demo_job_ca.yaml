@@ -1,0 +1,18 @@
+name: custom-action
+
+on:
+  [issues, pull_request]
+
+jobs:
+  CA:
+    runs-on: ubuntu-latest
+    steps:
+      - name: first_interaction
+        uses: actions/first-interaction@v1.3.0
+        with:
+          # Token for the repository. Can be passed in using {{ secrets.GITHUB_TOKEN }}
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          # Comment to post on an individual's first issue
+          issue-message: Hi, you submitted first issue
+          # Comment to post on an individual's first pull request
+          pr-message: Hi, you submitted the first pull request
