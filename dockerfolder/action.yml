@@ -1,4 +1,4 @@
-# action.yml
+# action.yml - metadata for the docker
 name: 'Hello world'
 description: 'Greeting and display time'
 
