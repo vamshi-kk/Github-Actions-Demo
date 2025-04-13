@@ -1,3 +1,4 @@
+name: javascript-action
 on: [push]
 
 jobs:
