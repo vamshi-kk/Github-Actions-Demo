@@ -6,9 +6,11 @@ jobs:
   docker-action:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
       - name: docker-call
         id: hello
-        uses: actions/dockerfolder@v1
+        uses: ./dockerfolder
         with:
           who-to-greet: 'Vamshi'
       - name: Print output time
