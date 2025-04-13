@@ -7,4 +7,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: docker-call
-        uses: actions/dockerfolder@v2
+        id: hello
+        uses: actions/dockerfolder@v1
+        with:
+          who-to-greet: Vamshi
+      - name: Print output time
+        run: echo "The time was @{{ stops.hello.outputs.time }}"
