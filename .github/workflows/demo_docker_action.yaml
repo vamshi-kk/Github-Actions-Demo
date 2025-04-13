@@ -10,6 +10,6 @@ jobs:
         id: hello
         uses: actions/dockerfolder@v1
         with:
-          who-to-greet: Vamshi
+          who-to-greet: 'Vamshi'
       - name: Print output time
-        run: echo "The time was @{{ stops.hello.outputs.time }}"
+        run: echo "The time was ${{ steps.hello.outputs.time }}"
