@@ -1,0 +1,10 @@
+name: docker action
+
+on: push
+
+jobs:
+  docker-action:
+    runs-on: ubuntu-latest
+    steps:
+      - name: docker-call
+        uses: actions/dockerfolder@v2
