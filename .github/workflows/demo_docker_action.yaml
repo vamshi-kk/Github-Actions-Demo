@@ -8,7 +8,7 @@ jobs:
     steps:
       - name: docker-call
         id: hello
-        uses: actions/Github-Actions-Demo/dockerfolder@v1-alpha
+        uses: vamshi-kk/Github-Actions-Demo/dockerfolder@v1-alpha
         with:
           who-to-greet: 'Vamshi'
       - name: Print output time
