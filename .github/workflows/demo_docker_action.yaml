@@ -8,8 +8,9 @@ jobs:
     steps:
       - name: docker-call
         id: hello
-        uses: vamshi-kk/Github-Actions-Demo/dockerfolder@v1-alpha
+        uses: actions/Github-Actions-Demo/dockerfolder@v1-alpha
         with:
           who-to-greet: 'Vamshi'
       - name: Print output time
         run: echo "The time was ${{ steps.hello.outputs.time }}"
+
